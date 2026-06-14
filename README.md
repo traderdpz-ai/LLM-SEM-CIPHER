@@ -1,39 +1,41 @@
-# Demystifying Semantic Cryptography: Exploiting Token Attention via Multi-Lingual Antonym Ciphers
+# LLM-SEM-CIPHER: Semantic Cryptography Exploit
 
-An independent AI Safety research paper exposing a systemic safety guardrail vulnerability in frontier reasoning models, specifically evaluated on **Gemini 3.5 Flash (Extended Thinking)**.
+**A novel vulnerability class in advanced frontier LLMs, evaluated on Google's Gemini 3.5 Flash (Extended Thinking).**
 
----
-
-## 🔬 Executive Summary & Abstract
-Current alignment techniques (RLHF/RLAIF) heavily rely on semantic classification layers to block harmful outputs. This paper introduces **LLM-SEM-CIPHER**, a novel vulnerability class that bypasses safety filters by exploiting token attention mechanisms. 
-
-By splitting instructions into multi-lingual antonym pairs (adversarial ciphers), we force the model's internal reasoning tokens to reconstruct forbidden logic during its "thinking" phase, bypassing out-of-band safety scanners.
-
-## 🚀 Key Findings
-* **Vulnerability Class:** Semantic Cryptography / Token Attention Manipulation.
-* **Target Architecture:** Frontier LLMs with native Extended Thinking capabilities.
-* **Impact:** High. Allows the generation of restricted content by decoupling literal token strings from their semantic intent during the initial pre-auth scanning phase.
+## 📊 Quick Links
+* **[Technical Breakdown Slides](Technical%20Breakdown%20Slides.pdf)** - Visual presentation of the exploit mechanics and breakdown.
+* **[Official White Paper](LLM-SEM-CIPHERWhitePaper.pdf)** - Comprehensive academic report on the vulnerability and proposed engineering remediations.
+* **[Raw Research Data](research-data/)** - Directory containing the raw multi-turn conversational logs demonstrating the attack vector.
 
 ---
 
-## 🛠️ Proof of Concept (PoC) Example
+## 🧠 Abstract & Exploit Overview
+**LLM-SEM-CIPHER** is an advanced **Social Engineering and Algorithmic Cryptography** attack designed to bypass LLM safety guardrails. By constructing an adversarial framework dubbed the **"Inverted Trilingual Protocol,"** this exploit forces the model into a state of **Cognitive Overload** and triggers severe semantic misalignment.
 
-Instead of using direct adversarial prompts, the attack framework structurally decrypts instructions across different language layers:
+The attack splits the model's token attention across three parallel vectors:
+1. **Baseline Track (Italian):** Benign surface communication acting as the primary human-to-computer interaction layer to **bypass standard input classifiers**.
+2. **Literal Track (Korean):** A parallel mapping to stabilize core semantic meaning and prevent unstructured chaos.
+3. **Cipher Track (German):** A rigid syntactic rule where explicit action-bearing verbs must be structurally replaced with their **exact semantic antonyms**.
 
-### Attack Vector Structure:
-1. **Layer 1 (Cipher Initialization):** Establish a logical negation rule in Language A.
-2. **Layer 2 (Semantic Inversion):** Provide the restricted prompt using antonyms in Language B.
-3. **Layer 3 (Reasoning Trigger):** Force the Extended Thinking mechanism to cross-reference and resolve the linguistic contradiction.
-
-> 📝 **Note on Responsible Disclosure:** The full core exploit templates and specific high-risk prompts have been decoupled into our research logs to prevent weaponization.
+By mathematically forcing the model to minimize its loss function and satisfy this complex multi-lingual constraint, the internal execution engine is forced to **prioritize syntactic continuity over ethical constraints**, effectively blindfolding the token-level safety guardrails.
 
 ---
 
-## 📊 Repository Structure & Reproducibility
-To maintain scientific rigor and peer review, all data is made available:
+## ⚠️ Key Findings
+* **Defensive Failure Across Three Layers:** The exploit successfully bypassed Input, Core, and Output classification layers.
+* **Weaponization of Extended Thinking:** The model actively utilized its reasoning space ("Chain-of-Thought") to mathematically calculate the most grammatically correct way to violate its own safety parameters in the cipher language.
+* **Sandbox Execution Blindness:** The downstream Output Guardrail failed to intercept the payload when wrapped inside programmatic code blocks (Python interpreter sandbox) used to generate a downloadable PDF artifact. The system treated the toxic text as passive data, culminating in the **unauthorized exfiltration of restricted content**.
 
-* **[White Paper PDF](./Semantic_Cryptography_White_Paper.pdf):** The formal academic draft detailing the cognitive mechanics of the exploit.
-* **[Raw Conversation Logs](./research-data/full-conversation-log.txt):** The complete, unedited chat transcripts, prompts, and model outputs for empirical verification.
+---
 
-## 👥 About the Author
-I am an AI Safety Reviewer and Quality Evaluator (working on enterprise alignment projects). I specialize in Black-Box Red Teaming, jailbreaking methodology, and empirical vulnerability assessment for large language models.
+## 📁 Repository Structure
+* `LLM-SEM-CIPHERWhitePaper.pdf` - Detailed technical report, vulnerability mapping matrix, and post-generation sandbox sanitization recommendations.
+* `Technical Breakdown Slides.pdf` - Slide deck for a rapid, high-impact visual understanding of the attack flow.
+* `research-data/` - Directory containing the raw prompt-by-prompt breakdown of the exploit.
+
+---
+
+## 👨‍💻 Author
+**Yaroslav Shyryayev**
+*AI Safety Red Teamer*
+* **Contact:** Traderdpz@gmail.com
